@@ -6,11 +6,12 @@ import { GoogleGenAI, GenerateContentResponse } from "@google/genai";
 // a direct call to the Google GenAI API. This function should be deployed
 // as a serverless function or on a secure backend server.
 
-if (!process.env.API_KEY) {
+// ¡CORREGIDO! Así es como se accede a las variables de entorno con Vite
+if (!import.meta.env.VITE_API_KEY) {
     throw new Error("API_KEY environment variable not set");
 }
 
-const ai = new GoogleGenAI({ apiKey: process.env.API_KEY });
+const ai = new GoogleGenAI({ apiKey: import.meta.env.VITE_API_KEY });
 
 /**
  * Generates a weekly strategic monitoring report about the Colombian healthcare system.
