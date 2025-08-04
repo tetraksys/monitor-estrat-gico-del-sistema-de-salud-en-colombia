@@ -1,0 +1,6 @@
+{
+  "name": "Monitor Estratégico del Sistema de Salud en Colombia",
+  "description": "An AI-powered dashboard that generates weekly strategic monitoring reports on the Colombian health system for the pharmaceutical industry. It analyzes public data to provide insights on financial sustainability, regulation, and access to new therapies.",
+  "requestFramePermissions": [],
+  "prompt": ""
+}
