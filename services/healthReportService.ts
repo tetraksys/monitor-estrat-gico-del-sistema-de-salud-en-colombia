@@ -11,7 +11,9 @@ if (!import.meta.env.VITE_API_KEY) {
     throw new Error("VITE_API_KEY environment variable not set");
 }
 
-const ai = new GoogleGenerativeAI({ apiKey: import.meta.env.VITE_API_KEY });
+const ai = new GoogleGenAI({ apiKey: import.meta.env.VITE_API_KEY });
+
+
 /**
  * Generates a weekly strategic monitoring report about the Colombian healthcare system.
  * This function is designed to run on a server, not in the client/browser.
