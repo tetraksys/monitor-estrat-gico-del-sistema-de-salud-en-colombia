@@ -8,11 +8,10 @@ import { GoogleGenAI, GenerateContentResponse } from "@google/genai";
 
 // ¡CORREGIDO! Así es como se accede a las variables de entorno con Vite
 if (!import.meta.env.VITE_API_KEY) {
-    throw new Error("API_KEY environment variable not set");
+    throw new Error("VITE_API_KEY environment variable not set");
 }
 
-const ai = new GoogleGenAI({ apiKey: import.meta.env.VITE_API_KEY });
-
+const ai = new GoogleGenerativeAI({ apiKey: import.meta.env.VITE_API_KEY });
 /**
  * Generates a weekly strategic monitoring report about the Colombian healthcare system.
  * This function is designed to run on a server, not in the client/browser.
